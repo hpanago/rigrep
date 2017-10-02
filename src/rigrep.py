@@ -1,19 +1,30 @@
+#!/usr/bin/env python2
+"""This script specifies a command line tool to get the files containing a
+specified keyword.
+Usage: python2 rigrep.py <keyword>
+Here, <keyword> is the word you want to search."""
+
 import pickle
 import sys
 
-f = open(".index")
-reverseIndex, filesById = pickle.load(f)
-
-f.close()
 
 def search(token):
-	if token not in reverseIndex:
-		return 
-	fileNames = []
-	for docId in reverseIndex[token]:
-		fileNames.append(filesById[docId])
-	return fileNames
+	"""Searches for files containing the passed token using the .index file
+	and returns the list of their names."""
 
-print search(sys.argv[1])
+	if token not in reverse_index:
+		return None  # Return if token is not in reverse_index, as it means
+	                 # the token is absent in all the files.
+	file_names = []
+	for doc_id in reverse_index[token]:
+		file_names.append(files_by_id[doc_id])
+	return file_names
 
 
+with open(".index") as f:  # Loads the pickled index file.
+	reverse_index, files_by_id = pickle.load(f)
+
+# Output can be dramatically better if it is in a tree structure.
+# But for now, just a linear loop is used.
+for result in search(sys.argv[1]):  # Displays the results nicely.
+	print result
