@@ -28,5 +28,7 @@ with open(".index") as f:
 
 # Output can be dramatically better if it is in a tree structure.
 # But for now, just a linear loop is used.
-for result in search(sys.argv[1]):  # Displays the results nicely.
-	print result
+results = search(sys.argv[1])
+if results is not None:
+	for result in search(sys.argv[1]):  # Displays the results nicely.
+		print result
