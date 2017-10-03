@@ -1,10 +1,18 @@
-# rigrep
+# Reverse Index GREP
 
-## How to use
 
-After you clone this repo, you should get yourself a Linux terminal. Kidding.
+## Get Started
+Go to the directory of your choice, then use the `git clone` command to get a local clone of this repo.
+![Cloning](demos/rigrep_clone.gif)
 
-You should run rigrepdb.py first with the first argument being the folder/directory you want it to index/"crawl".
-This will create the necessary .index file which will be used by rigrep.py afterwards.
+## Usage
 
-Run rigrep.py with the word you are looking for as the first argument.
+After cloning this repo, you should get yourself a Linux terminal. Kidding :)
+
+You should first run [`rigrepdb.py`][rigrepdb] with the first argument as the folder/directory you want to index or "crawl".
+This will create the necessary `.index` file which will be used by [`rigrep.py`][rigrep] afterwards.
+
+Run [`rigrep.py`][rigrep] with the word you are looking for as the first argument.
+
+[rigrepdb]: src/rigrepdb.py
+[rigrep]: src/rigrep.py
