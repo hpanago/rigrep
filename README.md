@@ -3,6 +3,7 @@
 
 ## Get Started
 Go to the directory of your choice, then use the `git clone` command to get a local clone of this repo.
+
 ![Cloning](demos/rigrep_clone.gif)
 
 ## Usage
@@ -13,6 +14,8 @@ You should first run [`rigrepdb.py`][rigrepdb] with the first argument as the fo
 This will create the necessary `.index` file which will be used by [`rigrep.py`][rigrep] afterwards.
 
 Run [`rigrep.py`][rigrep] with the word you are looking for as the first argument.
+
+![Main Demo](demos/rigrep_demo.gif)
 
 [rigrepdb]: src/rigrepdb.py
 [rigrep]: src/rigrep.py
