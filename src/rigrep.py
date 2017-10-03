@@ -21,10 +21,14 @@ def search(token):
 	return file_names
 
 
-with open(".index") as f:  # Loads the pickled index file.
+# Loads the pickled index file into memory.
+# Thus, it's not memory-friendly and better ways must be devised.
+with open(".index") as f:
 	reverse_index, files_by_id = pickle.load(f)
 
 # Output can be dramatically better if it is in a tree structure.
 # But for now, just a linear loop is used.
-for result in search(sys.argv[1]):  # Displays the results nicely.
-	print result
+results = search(sys.argv[1])
+if results is not None:
+	for result in search(sys.argv[1]):  # Displays the results nicely.
+		print result
