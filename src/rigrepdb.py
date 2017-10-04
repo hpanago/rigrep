@@ -72,5 +72,5 @@ for root, dirs, files in os.walk(sys.argv[1], topdown=False):
 
 
 # Dumps the indexing into the .index file.
-with open('.index', 'w+') as index_file:
+with open('.index', 'wb+') as index_file:
     pickle.dump((REVERSE_INDEX, FILES_BY_ID), index_file)
