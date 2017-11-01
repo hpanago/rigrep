@@ -1,4 +1,6 @@
-# Reverse Index GREP
+# Reverse Index GREP 
+
+![rigrep logo](rigrep_icon.png)
 
 
 ## Get Started
